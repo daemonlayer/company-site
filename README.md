@@ -1,46 +1,45 @@
-# Astro Starter Kit: Basics
+# DaemonLayer Website
 
-```sh
-npm create astro@latest -- --template basics
+This is the DaemonLayer marketing site built with **Astro**.
+
+## Getting Started
+
+Clone the repository and install dependencies:
+
+```bash
+npm install
+````
+
+Start the development server:
+
+```bash
+npm run astro dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The site will be available at **[http://localhost:4321](http://localhost:4321)**
 
-## 🚀 Project Structure
+## Content Management
 
-Inside of your Astro project, you'll see the following folders and files:
+We use [PagesCMS](https://pagescms.org) to edit website content.
+PagesCMS is connected directly to this GitHub repository and manages Markdown files stored in the `/src/content` directory.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+When you edit or add content through PagesCMS, it automatically commits the changes to the repo — no database or external storage is used.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+To update content:
 
-## 🧞 Commands
+1. Go to [PagesCMS Dashboard](https://app.pagescms.org)
+2. Log in with your GitHub account
+3. Open the **DaemonLayer** project
+4. Select the company-site repository
+5. Edit the content and click **Save**
 
-All commands are run from the root of the project, from a terminal:
+All updates are committed to the `main` branch and deployed automatically.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Deployment
 
-## 👀 Want to learn more?
+The site is deployed through **Railway**.
+Each commit to the `main` branch triggers an automatic build and deploy.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Early Access Form
+
+The “Apply for Early Access” form sends a confirmation email to the user and an internal notification to the DaemonLayer team

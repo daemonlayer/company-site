@@ -1,154 +1,241 @@
 ---
-import Button from "./ui/button.astro";
 ---
 
-<div id="error-message" class="hidden mb-4 p-4 text-red-800 bg-red-100 rounded-md text-center">
-  <span>Your request could not be saved. Please try again.</span>
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
+
+<div id="error-message" class="sib-form-message-panel hidden mb-4 p-4 text-red-800 bg-red-100 rounded-md text-center">
+  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+    <span>Your request could not be saved. Please try again.</span>
+  </div>
 </div>
 
-<div id="success-message" class="hidden mb-4 p-4 text-green-800 bg-green-100 rounded-md text-center">
-  <span>Your request has been sent successfully</span>
+<div id="success-message" class="sib-form-message-panel hidden mb-4 p-4 text-green-800 bg-green-100 rounded-md text-center">
+  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+    <span>Your request has been sent successfully</span>
+  </div>
 </div>
 
 <form id="sib-form" method="POST" action="https://bad12c37.sibforms.com/serve/MUIFAC1mtz0NhM4cF_2yFo81MqiJorLiUDaUL4WTp1h6JoRcUCl9Ht63BZDW5yCk-v9lb2SlG4cHH6uLl5w7ufTSBmErlhQ-nnmF7KhEDXclu4WS7gwp4L5cMWs8YRYMt_DVno7hQ84pePET1mHHgopO5_9V0w2nx181HsxZyA4P-h6AuuNzC5xjICJRYCLLcVXRJpwWJfXcZGWkxg==" data-type="subscription">
   <div class="mb-5">
-    <input
-      class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-      maxlength="200"
-      type="text"
-      id="FIRSTNAME"
-      name="FIRSTNAME"
-      autocomplete="off"
-      placeholder="First Name"
-      data-required="true"
-      required
-    />
-    <label class="entry__error entry__error--primary hidden text-red-400 text-sm mt-1"></label>
-  </div>
-
-  <div class="mb-5">
-    <input
-      class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-      maxlength="200"
-      type="text"
-      id="LASTNAME"
-      name="LASTNAME"
-      autocomplete="off"
-      placeholder="Last Name"
-      data-required="true"
-      required
-    />
-    <label class="entry__error entry__error--primary hidden text-red-400 text-sm mt-1"></label>
-  </div>
-
-  <div class="mb-5">
-    <input
-      class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-      type="text"
-      id="EMAIL"
-      name="EMAIL"
-      autocomplete="off"
-      placeholder="Email"
-      data-required="true"
-      required
-    />
-    <label class="entry__error entry__error--primary hidden text-red-400 text-sm mt-1"></label>
-  </div>
-
-  <div class="mb-5">
-    <input
-      class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-      maxlength="200"
-      type="text"
-      id="COMPANY"
-      name="COMPANY"
-      autocomplete="off"
-      placeholder="Company Name"
-      data-required="true"
-      required
-    />
-    <label class="entry__error entry__error--primary hidden text-red-400 text-sm mt-1"></label>
-  </div>
-
-  <div class="mb-5">
-    <input
-      class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-      maxlength="200"
-      type="text"
-      data-numeric="true"
-      id="MONTHLY_TICKETS"
-      name="MONTHLY_TICKETS"
-      autocomplete="off"
-      placeholder="Monthly Support Tickets (approx.)"
-      data-required="true"
-      required
-    />
-    <label class="entry__error entry__error--primary hidden text-red-400 text-sm mt-1"></label>
-  </div>
-
-  <div class="mb-5">
-    <label class="block text-sm font-semibold text-gray-800 mb-3">Current PSA System</label>
-    <div class="space-y-2">
-      <label class="flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" name="PSA_SYSTEM[]" value="Autotask" class="w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
-        <span class="text-sm text-gray-800">Autotask</span>
-      </label>
-      <label class="flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" name="PSA_SYSTEM[]" value="Connectwise" class="w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
-        <span class="text-sm text-gray-800">Connectwise</span>
-      </label>
-      <label class="flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" name="PSA_SYSTEM[]" value="HaloPSA" class="w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
-        <span class="text-sm text-gray-800">HaloPSA</span>
-      </label>
-      <label class="flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" name="PSA_SYSTEM[]" value="Atera" class="w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
-        <span class="text-sm text-gray-800">Atera</span>
-      </label>
-      <label class="flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" name="PSA_SYSTEM[]" value="Jira" class="w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
-        <span class="text-sm text-gray-800">Jira</span>
-      </label>
-      <label class="flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" name="PSA_SYSTEM[]" value="Freshdesk" class="w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
-        <span class="text-sm text-gray-800">Freshdesk</span>
-      </label>
+    <div class="sib-input sib-form-block">
+      <div class="form__entry entry_block">
+        <div class="form__label-row">
+          <div class="entry__field">
+            <input
+              class="input w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
+              maxlength="200"
+              type="text"
+              id="FIRSTNAME"
+              name="FIRSTNAME"
+              autocomplete="off"
+              placeholder="First Name"
+              data-required="true"
+              required
+            />
+          </div>
+        </div>
+        <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; color:#dc2626; background-color:#fee2e2; border-radius:0.375rem; padding: 0.25rem 0.5rem; margin-top: 0.25rem;"></label>
+      </div>
     </div>
-    <label class="entry__error entry__error--primary hidden text-red-400 text-sm mt-1"></label>
   </div>
 
   <div class="mb-5">
-    <textarea
-      rows="4"
-      class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-      maxlength="500"
-      id="NOTES"
-      name="NOTES"
-      autocomplete="off"
-      placeholder="Notes"
-      data-required="true"
-      required
-    ></textarea>
-    <label class="entry__error entry__error--primary hidden text-red-400 text-sm mt-1"></label>
+    <div class="sib-input sib-form-block">
+      <div class="form__entry entry_block">
+        <div class="form__label-row">
+          <div class="entry__field">
+            <input
+              class="input w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
+              maxlength="200"
+              type="text"
+              id="LASTNAME"
+              name="LASTNAME"
+              autocomplete="off"
+              placeholder="Last Name"
+              data-required="true"
+              required
+            />
+          </div>
+        </div>
+        <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; color:#dc2626; background-color:#fee2e2; border-radius:0.375rem; padding: 0.25rem 0.5rem; margin-top: 0.25rem;"></label>
+      </div>
+    </div>
   </div>
 
   <div class="mb-5">
-    <script>
-      function handleCaptchaResponse() {
-        var event = new Event('captchaChange');
-        document.getElementById('sib-captcha').dispatchEvent(event);
-        window.grecaptcha = window.turnstile;
-      }
-    </script>
-    <div class="cf-turnstile g-recaptcha" data-sitekey="0x4AAAAAAB_sVsSvwOz2X55C" id="sib-captcha" data-callback="handleCaptchaResponse" data-language="en"></div>
-    <label class="entry__error entry__error--primary hidden text-red-400 text-sm mt-1"></label>
+    <div class="sib-input sib-form-block">
+      <div class="form__entry entry_block">
+        <div class="form__label-row">
+          <div class="entry__field">
+            <input
+              class="input w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
+              type="text"
+              id="EMAIL"
+              name="EMAIL"
+              autocomplete="off"
+              placeholder="Email"
+              data-required="true"
+              required
+            />
+          </div>
+        </div>
+        <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; color:#dc2626; background-color:#fee2e2; border-radius:0.375rem; padding: 0.25rem 0.5rem; margin-top: 0.25rem;"></label>
+      </div>
+    </div>
   </div>
 
-  <Button type="submit" size="lg" block>Submit Request</Button>
+  <div class="mb-5">
+    <div class="sib-input sib-form-block">
+      <div class="form__entry entry_block">
+        <div class="form__label-row">
+          <div class="entry__field">
+            <input
+              class="input w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
+              maxlength="200"
+              type="text"
+              id="COMPANY"
+              name="COMPANY"
+              autocomplete="off"
+              placeholder="Company Name"
+              data-required="true"
+              required
+            />
+          </div>
+        </div>
+        <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; color:#dc2626; background-color:#fee2e2; border-radius:0.375rem; padding: 0.25rem 0.5rem; margin-top: 0.25rem;"></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="sib-input sib-form-block">
+      <div class="form__entry entry_block">
+        <div class="form__label-row">
+          <div class="entry__field">
+            <input
+              class="input w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
+              maxlength="200"
+              type="text"
+              data-numeric="true"
+              id="MONTHLY_TICKETS"
+              name="MONTHLY_TICKETS"
+              autocomplete="off"
+              placeholder="Monthly Support Tickets (approx.)"
+              data-required="true"
+              required
+            />
+          </div>
+        </div>
+        <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; color:#dc2626; background-color:#fee2e2; border-radius:0.375rem; padding: 0.25rem 0.5rem; margin-top: 0.25rem;"></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="sib-checkbox-group sib-form-block">
+      <div class="form__entry entry_mcq">
+        <div class="form__label-row">
+          <label class="entry__label block text-sm font-semibold text-gray-800 mb-3">Current PSA System</label>
+          <div class="space-y-2">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" name="PSA_SYSTEM[]" value="Autotask" class="input_replaced w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
+              <span class="text-sm text-gray-800">Autotask</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" name="PSA_SYSTEM[]" value="Connectwise" class="input_replaced w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
+              <span class="text-sm text-gray-800">Connectwise</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" name="PSA_SYSTEM[]" value="HaloPSA" class="input_replaced w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
+              <span class="text-sm text-gray-800">HaloPSA</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" name="PSA_SYSTEM[]" value="Atera" class="input_replaced w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
+              <span class="text-sm text-gray-800">Atera</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" name="PSA_SYSTEM[]" value="Jira" class="input_replaced w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
+              <span class="text-sm text-gray-800">Jira</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" name="PSA_SYSTEM[]" value="Freshdesk" class="input_replaced w-4 h-4 text-brand border-slate-300 rounded focus:ring-brand" />
+              <span class="text-sm text-gray-800">Freshdesk</span>
+            </label>
+          </div>
+        </div>
+        <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; color:#dc2626; background-color:#fee2e2; border-radius:0.375rem; padding: 0.25rem 0.5rem; margin-top: 0.25rem;"></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="sib-input sib-form-block">
+      <div class="form__entry entry_block">
+        <div class="form__label-row">
+          <div class="entry__field">
+            <textarea
+              rows="4"
+              class="input w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
+              maxlength="500"
+              id="NOTES"
+              name="NOTES"
+              autocomplete="off"
+              placeholder="Notes"
+              data-required="true"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; color:#dc2626; background-color:#fee2e2; border-radius:0.375rem; padding: 0.25rem 0.5rem; margin-top: 0.25rem;"></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="sib-captcha sib-form-block">
+      <div class="form__entry entry_block">
+        <div class="form__label-row">
+          <script>
+            function handleCaptchaResponse() {
+              var event = new Event('captchaChange');
+              document.getElementById('sib-captcha').dispatchEvent(event);
+              window.grecaptcha = window.turnstile;
+            }
+          </script>
+          <div class="cf-turnstile g-recaptcha" data-sitekey="0x4AAAAAAB_sVsSvwOz2X55C" id="sib-captcha" data-callback="handleCaptchaResponse" data-language="en"></div>
+        </div>
+        <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; color:#dc2626; background-color:#fee2e2; border-radius:0.375rem; padding: 0.25rem 0.5rem; margin-top: 0.25rem;"></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="sib-form-block" style="text-align: center">
+      <button
+        class="sib-form-block__button sib-form-block__button-with-loader w-full px-6 py-3 rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 bg-brand text-white hover:bg-brand-dark border-2 border-transparent"
+        form="sib-form"
+        type="submit"
+      >
+        <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="display: none; width: 0; height: 0;">
+          <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+        </svg>
+        Submit Request
+      </button>
+    </div>
+  </div>
 
   <input type="text" name="email_address_check" value="" class="hidden" style="display:none" />
   <input type="hidden" name="locale" value="en" />
 </form>
+
+<style>
+  .entry__error:empty {
+    display: none;
+  }
+  .entry__error {
+    display: block;
+  }
+</style>
 
 <script is:inline>
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
