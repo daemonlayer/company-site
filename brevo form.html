@@ -152,49 +152,49 @@
           </div>
         </div>
         <div style="padding: 8px 0;">
-          <div class="sib-checkbox-group sib-form-block">
+          <div class="sib-checkbox-group sib-form-block" data-required="true">
             <div class="form__entry entry_mcq">
               <div class="form__label-row ">
-                <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;">Current PSA System</label>
+                <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;" data-required="*">Current PSA System</label>
                 <div style="">
                   <div class="entry__choice">
                     <label class="checkbox__label">
-                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="Autotask" value="Autotask" />
+                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="Autotask" value="Autotask" data-required="true" />
                       <span class="checkbox checkbox_tick_positive"
                 style="margin-left:"
                 ></span><span style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">Autotask</span> </label>
                   </div>
                   <div class="entry__choice">
                     <label class="checkbox__label">
-                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="Connectwise" value="Connectwise" />
+                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="Connectwise" value="Connectwise" data-required="true" />
                       <span class="checkbox checkbox_tick_positive"
                 style="margin-left:"
                 ></span><span style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">Connectwise</span> </label>
                   </div>
                   <div class="entry__choice">
                     <label class="checkbox__label">
-                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="HaloPSA" value="HaloPSA" />
+                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="HaloPSA" value="HaloPSA" data-required="true" />
                       <span class="checkbox checkbox_tick_positive"
                 style="margin-left:"
                 ></span><span style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">HaloPSA</span> </label>
                   </div>
                   <div class="entry__choice">
                     <label class="checkbox__label">
-                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="Atera" value="Atera" />
+                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="Atera" value="Atera" data-required="true" />
                       <span class="checkbox checkbox_tick_positive"
                 style="margin-left:"
                 ></span><span style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">Atera</span> </label>
                   </div>
                   <div class="entry__choice">
                     <label class="checkbox__label">
-                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="Jira" value="Jira" />
+                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="Jira" value="Jira" data-required="true" />
                       <span class="checkbox checkbox_tick_positive"
                 style="margin-left:"
                 ></span><span style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">Jira</span> </label>
                   </div>
                   <div class="entry__choice">
                     <label class="checkbox__label">
-                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="Freshdesk" value="Freshdesk" />
+                      <input type="checkbox" class="input_replaced" name="PSA_SYSTEM[]" data-value="Freshdesk" value="Freshdesk" data-required="true" />
                       <span class="checkbox checkbox_tick_positive"
                 style="margin-left:"
                 ></span><span style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">Freshdesk</span> </label>
@@ -216,24 +216,6 @@
                 </div>
               </div>
 
-              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-              </label>
-            </div>
-          </div>
-        </div>
-        <div style="padding: 8px 0;">
-          <div class="sib-captcha sib-form-block">
-            <div class="form__entry entry_block">
-              <div class="form__label-row ">
-                <script>
-                  function handleCaptchaResponse() {
-                    var event = new Event('captchaChange');
-                    document.getElementById('sib-captcha').dispatchEvent(event);
-                    window.grecaptcha = window.turnstile;
-                  }
-                </script>
-                <div class="cf-turnstile g-recaptcha" data-sitekey="0x4AAAAAAB_sVsSvwOz2X55C" id="sib-captcha" data-callback="handleCaptchaResponse" data-language="en"></div>
-              </div>
               <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
               </label>
             </div>
@@ -286,7 +268,6 @@
 
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
 <!-- End Brevo Form -->
